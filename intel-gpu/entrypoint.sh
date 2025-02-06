@@ -19,8 +19,8 @@ sleep 5
 
 echo "🔴 Retrieve models..."
 ./ollama pull deepseek-r1:8b
-./ollama pull deepseek-r1:7b
-./ollama pull deepseek-r1:1.5b
+# ./ollama pull deepseek-r1:7b
+# ./ollama pull deepseek-r1:1.5b
 echo "🟢 Done!"
 
 # Wait for Ollama process to finish.
