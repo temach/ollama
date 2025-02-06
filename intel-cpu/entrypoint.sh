@@ -8,8 +8,8 @@ pid=$!
 # Pause for Ollama to start.
 sleep 5
 
-echo "🔴 Retrieve deepseek-r1:8b model..."
-# ollama pull deepseek-r1:8b
+echo "🔴 Retrieve models..."
+ollama pull deepseek-r1:8b
 # ollama pull deepseek-r1:7b
 echo "🟢 Done!"
 
