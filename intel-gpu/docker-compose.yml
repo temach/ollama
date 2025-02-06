@@ -2,8 +2,8 @@ services:
   ollama:
     image: intelanalytics/ipex-llm-inference-cpp-xpu:latest
     container_name: ollama
-    ports:
-      - "11434:11434"
+    # ports:
+    #   - "11434:11434"
     volumes:
       - ollama:/root/.ollama
       - ./entrypoint.sh:/entrypoint.sh
@@ -16,7 +16,7 @@ services:
     image: ghcr.io/open-webui/open-webui:main
     container_name: open-webui
     ports:
-      - "3000:8080"
+      - "127.0.0.1:8080:8080"
     volumes:
       - open-webui:/app/backend/data
     environment:
