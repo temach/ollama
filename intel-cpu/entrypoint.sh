@@ -12,12 +12,16 @@ pid=$!
 sleep 5
 
 echo "🔴 Retrieve models..."
+ollama pull deepseek-r1:1.5b
 ollama pull deepseek-r1:8b
 # ollama pull deepseek-ocr:3b
 ollama pull opencoder:1.5b
-# ollama pull opencoder:8b
+ollama pull opencoder:8b
+ollama pull qwen3:8b
+ollama pull qwen3-coder:30b
+# ollama pull qwen3-coder-next:latest
 ollama pull lfm2.5-thinking:1.2b
-# ollama pull deepseek-r1:7b
+# ollama pull gpt-oss:20b
 echo "🟢 Done!"
 
 # Wait for Ollama process to finish.
