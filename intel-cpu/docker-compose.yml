@@ -5,6 +5,8 @@ services:
       - ollama:/root/.ollama
       - ./entrypoint.sh:/entrypoint.sh
     entrypoint: ["/usr/bin/bash", "/entrypoint.sh"]
+    ports:
+      - "127.0.0.1:11434:11434"
     user: "0:0"
     devices:
       - /dev/dri/renderD128:/dev/dri/renderD128
@@ -12,7 +14,7 @@ services:
   open-webui:
     image: ghcr.io/open-webui/open-webui:main
     ports:
-      - "127.0.0.1:3000:8080"
+      - "127.0.0.1:8080:8080"
     volumes:
       - open-webui:/app/backend/data
     environment:
