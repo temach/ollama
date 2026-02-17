@@ -19,6 +19,7 @@ ollama pull opencoder:1.5b
 ollama pull opencoder:8b
 ollama pull qwen3:8b
 ollama pull qwen3-coder:30b
+ollama pull glm-4.7-flash:q4_K_M
 # ollama pull qwen3-coder-next:latest
 ollama pull lfm2.5-thinking:1.2b
 # ollama pull gpt-oss:20b
