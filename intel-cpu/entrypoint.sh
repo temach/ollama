@@ -13,6 +13,10 @@ sleep 5
 
 echo "🔴 Retrieve models..."
 ollama pull deepseek-r1:8b
+# ollama pull deepseek-ocr:3b
+ollama pull opencoder:1.5b
+# ollama pull opencoder:8b
+ollama pull lfm2.5-thinking:1.2b
 # ollama pull deepseek-r1:7b
 echo "🟢 Done!"
 
