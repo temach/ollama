@@ -1,6 +1,8 @@
 services:
   ollama:
     image: ollama/ollama:latest
+    cpus: "18.0"
+    mem_limit: "17g"
     volumes:
       - ollama:/root/.ollama
       - ./entrypoint.sh:/entrypoint.sh
