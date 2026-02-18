@@ -6,6 +6,7 @@ services:
     volumes:
       - ollama:/root/.ollama
       - ./entrypoint.sh:/entrypoint.sh
+      - ./openclaw.json:/root/.openclaw/openclaw.json
     entrypoint: ["/usr/bin/bash", "/entrypoint.sh"]
     ports:
       - "127.0.0.1:11434:11434"
