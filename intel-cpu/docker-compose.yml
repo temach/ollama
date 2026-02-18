@@ -13,7 +13,9 @@ services:
     devices:
       - /dev/dri/renderD128:/dev/dri/renderD128
     environment:
-      OLLAMA_NO_CLOUD: "1"
+      - OLLAMA_NO_CLOUD="1"
+      - OLLAMA_DEBUG="1"
+      - OLLAMA_HOST="0.0.0.0:11434"
 
   open-webui:
     image: ghcr.io/open-webui/open-webui:main
@@ -22,8 +24,8 @@ services:
     volumes:
       - open-webui:/app/backend/data
     environment:
-      WEBUI_AUTH: "False"
-      OLLAMA_BASE_URL: "http://ollama:11434"
+      - WEBUI_AUTH="False"
+      - OLLAMA_BASE_URL="http://ollama:11434"
 
 volumes:
   ollama:

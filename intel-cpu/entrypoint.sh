@@ -1,8 +1,5 @@
 #!/bin/bash
 
-export OLLAMA_DEBUG=1
-export OLLAMA_HOST="0.0.0.0:11434"
-
 # Start Ollama in the background.
 /bin/ollama serve &
 # Record Process ID.
